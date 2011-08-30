@@ -1,0 +1,102 @@
+#comps-wrapper
+  font-family: arial !important
+  position: fixed
+  bottom: 20px
+  left: 20px
+  background: rgba(0, 0, 0, 0.6)
+  padding: 10px
+  white-space: nowrap
+  overflow-x: auto
+  overflow-y: hidden
+
+  -webkit-border-radius:  10px
+
+  .dropzone, .existing-image
+    height: 124px
+    width: 124px    
+    border: 3px solid rgba(255, 255, 255, 0.6)
+    background: rgba(0, 0, 0, 0.6)
+    text-align: center
+    -webkit-border-radius: 5px
+    display: inline-block
+    vertical-align: top
+
+  .dropzone
+    padding-top: 40px
+    height: 84px
+    color: rgba(255, 255, 255, 0.7)
+    -webkit-transition: all 0.1s linear    
+    &.hovering
+      background: rgba(0, 0, 0, 0.9)
+
+  .existing-image    
+    -webkit-transition: border-color 0.1s linear
+    cursor: pointer
+    margin-right: 10px
+    &:hover
+      border-color: rgba(255, 255, 255, 1.0)
+      overflow: hidden    
+    img
+      width: 124px
+
+#comps-overlay
+  position: absolute
+  z-index: 9999999999
+  top: 0
+  left: 0
+  #comps-overlay-inner
+    cursor: move
+    opacity: 0.5
+
+#comps-selections
+  display: inline-block
+
+#comp-up, #comp-down, #comp-left, #comp-right
+  background: #333
+  -webkit-border-radius: 3px
+  position: absolute
+  width: 31px
+  height: 31px
+  right: -35px
+  cursor: pointer
+  -webkit-transition: all 0.1s linear
+  &:hover
+    background-color: #111
+  &:before
+    border: 5px solid #fff
+    width: 0
+    height: 0
+    content: ""
+    position: absolute
+
+#comp-up
+  top: 0
+  &:before
+    border-width: 0 9px 9px 9px
+    border-color: transparent transparent #fff transparent
+    top: 10px
+    left: 6px    
+
+#comp-down
+  top: 32px
+  &:before
+    border-width: 9px 9px 0 9px
+    border-color: #fff transparent transparent transparent
+    top: 10px
+    left: 6px    
+
+#comp-left
+  top: 64px
+  &:before
+    border-width: 9px 9px 9px 0
+    border-color: transparent #fff transparent transparent
+    top: 7px
+    left: 10px    
+
+#comp-right
+  top: 96px
+  &:before
+    border-width: 9px 0 9px 9px
+    border-color: transparent transparent transparent #fff
+    top: 7px
+    left: 12px    

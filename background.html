@@ -1,0 +1,9 @@
+<html>
+  <head>
+    <script>
+      chrome.browserAction.onClicked.addListener(function(tab) {
+        chrome.tabs.sendRequest(tab.id, {method: "toggle"}, function(response) {});
+      });
+    </script>
+  </head>
+</html>
