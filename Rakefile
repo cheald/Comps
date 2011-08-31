@@ -8,7 +8,7 @@ task :package do
   FileUtils.mkdir_p "release"
   files.each do |f|
     FileUtils.mkdir_p "__deploy/#{File.dirname f}"
-    FileUtils.copy f, "__deploy"
+    FileUtils.copy f, "__deploy/#{File.dirname f}/"
   end
   `zip -r release/comps-#{version}.zip __deploy`
   FileUtils.rm_rf "__deploy", :secure => true
