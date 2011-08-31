@@ -6,7 +6,7 @@
     "default_icon": "images/icon.png"
   },
   "background_page": "background.html",
-  "permissions": [ "tabs", "http://*/" ],
+  "permissions": [ "tabs", "http://*/", "https://*/" ],
   "icons": {
     "128": "images/128.png",
     "64": "images/64.png",
