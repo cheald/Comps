@@ -1,6 +1,6 @@
 {
   "name": "Comps",
-  "version": "0.1",
+  "version": "0.1.1",
   "description": "Overlay comps onto your webpage for comparison",
   "browser_action": {
     "default_icon": "icon.png"

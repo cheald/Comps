@@ -72,7 +72,6 @@
       var comp, element, _i, _len, _results;
       if (localStorage["comp_list"]) {
         comps = JSON.parse(localStorage["comp_list"]);
-        console.log("Loading comps:", comps);
         _results = [];
         for (_i = 0, _len = comps.length; _i < _len; _i++) {
           comp = comps[_i];

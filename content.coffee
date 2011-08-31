@@ -64,7 +64,6 @@ setup = ->
   load = () ->
     if localStorage["comp_list"]
       comps = JSON.parse(localStorage["comp_list"])
-      console.log "Loading comps:", comps
       for comp in comps
         element = add_image localStorage["comp_data_" + comp], comp
 
