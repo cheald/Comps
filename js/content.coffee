@@ -46,7 +46,7 @@ setup = ->
     image.innerHTML = "<img src='#{data}' />"
     image.setAttribute("class", "existing-image")
     image.addEventListener "click", (e) ->
-      if e.ctrlKey
+      if e.ctrlKey or e.altKey
         if confirm "Delete this comp?"
           delete_comp this.getAttribute("data-uid")
       else if current_comp == this

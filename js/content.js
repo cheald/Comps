@@ -50,7 +50,7 @@
       image.innerHTML = "<img src='" + data + "' />";
       image.setAttribute("class", "existing-image");
       image.addEventListener("click", function(e) {
-        if (e.ctrlKey) {
+        if (e.ctrlKey || e.altKey) {
           if (confirm("Delete this comp?")) {
             return delete_comp(this.getAttribute("data-uid"));
           }
